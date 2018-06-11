@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'cloudinary', require: false
 gem 'activestorage-cloudinary-service'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'cloudinary'
+gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   gem 'dotenv-rails'
