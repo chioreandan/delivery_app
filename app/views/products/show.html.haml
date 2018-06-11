@@ -9,7 +9,10 @@
 %p
   %b Price:
   = @product.price
-
+- if @product.image.attached?
+  %p
+    %b Image
+    = cl_image_tag(@product.image.key, width: 300, height: 300, crop: "scale")
 = link_to 'Edit', edit_product_path(@product)
 \|
 = link_to 'Back', products_path
