@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   resources :products
-  root :to => "products#index"
+  get '/admin', to: "products#index"
+  root :to => "landing_pages#home"
 end
