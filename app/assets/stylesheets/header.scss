@@ -1,0 +1,148 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$theme-colors: ( "primary": #fe8301);
+$primary-color:#fe8301;
+$body-bg: white;
+$secondary-color:#f2f2f2;
+$font: "Raleway", sans-serif;
+@media screen and (max-width: 1366px) {
+  .navbar-default{
+      background-color: $body-bg;
+      border-color:transparent;
+  }
+}
+
+nav.navbar {
+  padding-top: 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-right: 120px;
+  margin-left: 120px;
+}
+
+.navbar-costom {
+  .navbar-brand {
+      font-size: 12px;
+  }
+}
+
+a{
+  float: left;
+  margin-top: 10px;
+  color:white;
+}
+
+a:hover{
+  text-decoration: none;
+  color:$primary-color;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color:$primary-color;
+}
+
+h1,
+.navbar-brand,
+.navbar-nav a {
+  font-family: $font;
+  color: black;
+  font-size: 12px;
+  padding: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.navbar > a:nth-child(3) > img:nth-child(1){
+  max-width: 40px;
+  margin-top: 2px;
+}
+
+#jumbotron-costum {
+  background-image: url("restaurante-cluj.jpg");
+  color: white;
+  font-family: $font;
+  margin-bottom: 0px;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron {
+  h1 {
+      text-align: center;
+      padding-top: 60px;
+      font-weight: bolder;
+  }
+  p {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 700px;
+      margin-top: 50px;
+  }
+  margin-bottom: 500px;
+}
+
+.navbar-default {
+  transition: 500ms ease;
+  background: transparent;
+  color: black;
+}
+.navbar-default.scrolled {
+  background-color: $secondary-color;
+  margin: 0 0 0 0;
+  padding-top: 5px;
+  border: 2px solid $secondary-color;
+  border-radius: 10px;
+}
+
+
+.navbar-default.scrolled {
+  h1,
+  .navbar-brand,
+  .navbar-nav a {
+      color: black;
+  }
+  a{
+    color: black;
+  }
+}
+
+
+
+.navbar-nav{
+  margin-left:400px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+  .bullet>li {
+      position: relative
+  }
+  .bullet>li:before,
+  .bullet>li::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background:$primary-color;
+      top: 50%;
+      margin-top: 2px;
+      right: -3px;
+      z-index: 1;
+      border-radius: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bullet>li:before,
+  .bullet>li:last-of-type:after {
+      content: none;
+  }
+}

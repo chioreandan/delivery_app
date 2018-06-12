@@ -1,6 +1,6 @@
-class LandingPagesController < ActionController::Base
-  def home
+class LandingPagesController < ApplicationController
 
+  def home
   end
 
 end
