@@ -1,10 +1,11 @@
 .navbar.navbar-fixed-top.navbar-costum.navbar-default.navbar-expand-lg
   %div.container
     %a
-      .navbar-brand
       EUREKA
       = succeed "CAFFE" do
         %br/
+    .navbar-brand
+      =image_tag ("logo.png")
     %ul.nav.navbar-nav.navbar-right.bullet.ml-auto
       %li.nav-item= link_to "HOME", '#'
       %li.nav-item= link_to "ABOUT", '#'
@@ -18,4 +19,3 @@
     %p.lead
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-

@@ -29,11 +29,27 @@ nav.navbar {
       font-size: 12px;
   }
 }
+.container{
+  a{
+    #brand-wrapper{
+        color:white;
+    }
+  }
+}
+.container{
+  a.scrolled{
+    #brand-wrapper{
+        color:black;
+    }
+  }
+}
 
 a{
   float: left;
   padding-top:5px;
   margin-top: 10px;
+
+  padding-left: 100px;
   color:white;
   font-weight: 900;
 }
@@ -58,8 +74,7 @@ h1,
   color: black;
   font-size: 12px;
   padding: 0;
-  margin-right: 10px;
-  margin-left: 10px;
+
   font-weight: 900;
 }
 
@@ -67,6 +82,19 @@ h1,
   max-width: 40px;
   margin-top: 2px;
 }
+.container{
+  .navbar-brand{
+    img{
+      float: left;
+      max-width:50px;
+      padding-right: 10px;
+       margin-top: 12px;
+       margin-left: -100px;
+    }
+  }
+
+}
+
 
 #jumbotron-costum {
   background-image: url("restaurante-cluj.jpg");

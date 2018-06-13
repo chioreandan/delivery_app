@@ -2,12 +2,10 @@
   - @products.each do |product|
     .body.col-lg-3.col-md-4.col-sm-6.image-hover
       .menu-image
-        = cl_image_tag(product.image.key, width: 50, height: 50, crop: "scale")
+        = cl_image_tag(product.image.key)
       .item
         = product.name
       .category
         = product.category
       .price
-        =product.price
-
-
+        = "#{product.price}&nbsp;&#36;".html_safe
