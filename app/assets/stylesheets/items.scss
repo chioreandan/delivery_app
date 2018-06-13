@@ -1,0 +1,84 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$theme-colors: ( "primary": #fe8301);
+$primary-color:#fe8301;
+$body-bg: white;
+$secondary-color:#f2f2f2;
+$font: "Raleway", sans-serif;
+
+.image-hover:hover {
+  transform: scale(1.25);
+  z-index: 2;
+  .col-lg-3:not(:hover) {
+      opacity: 0.2;
+  }
+}
+
+.image-hover {
+  transform: scale(1);
+  transition: 0.3s ease;
+}
+
+.item {
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 15px;
+  z-index: 1;
+}
+
+.category {
+  font-size: 14px;
+  text-align: center;
+  color: gray;
+}
+
+.price {
+  color: $primary-color;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu-image {
+  width: 100%;
+  img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+.items-wrap{
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+
+.row {
+  .col-lg-3, .col-md-4, .col-sm-6:not(:nth-of-type(4n+0)) {
+      border-right: solid;
+      border-width: 3px;
+      border-color: $secondary-color;
+  }
+  .col-lg-3, .col-md-4, .col-sm-6 {
+      border-bottom: solid;
+      border-width: 3px;
+      border-color: $secondary-color;
+      padding-bottom: 20px;
+      background-color: $body-bg;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row{
+      .col-sm-6{
+
+          margin-top:100px;
+      }
+  }
+}
+
+
