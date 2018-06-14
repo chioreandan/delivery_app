@@ -1,35 +1,35 @@
-%nav.navbar.navbar-static.bar-wrapper.navbar-expand-lg{:class => ".custom-carets"}
+%nav.navbar.navbar-expend-lg.navbar-static.bar-wrapper.navbar-expand-lg{:class => ".custom-carets"}
   .container.nav-div
     %ul.navbar-nav
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           CATEGORY
         .dropdown-menu.category-dropdown{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{:href => "#"} Burgers
-          %a.dropdown-item{:href => "#"} Pizza
-          %a.dropdown-item{:href => "#"} Meals
-          %a.dropdown-item{:href => "#"} Soups
-          %a.dropdown-item{:href => "#"} Pasta
+          %a.dropdown-item{href: "#"} Burgers
+          %a.dropdown-item{href: "#"} Pizza
+          %a.dropdown-item{href: "#"} Meals
+          %a.dropdown-item{href: "#"} Soups
+          %a.dropdown-item{href: "#"} Pasta
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           SORTING
         %span.caret
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a#del-filters.dropdown-item{:href => "#"} Delete filters
-          %a.dropdown-item{:href => "#"} Another action
+          %a#del-filters.dropdown-item{href: "#"} Delete filters
+          %a.dropdown-item{href: "#"} Another action
           .dropdown-divider
-          %a.dropdown-item{:href => "admin.html"} ADMIN
+          %a.dropdown-item{href: "/admin"} ADMIN
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           VEGETARIAN
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{:href => "#"} Action
-          %a.dropdown-item{:href => "#"} Another action
+          %a.dropdown-item{href: "#"} Action
+          %a.dropdown-item{href: "#"} Another action
           .dropdown-divider
-          %a.dropdown-item{:href => "#"} Something else here
+          %a.dropdown-item{href: "#"} Something else here
     .slider-nav
       %p.nav-price PRICE
       %p#left-price.pricer $0
       %section.demo.slider-Value
-        %input#range2{:multiple => "multiple", :type => "range", :value => "0,100"}/
+        %input#range2{multiple: "multiple", type: "range", value: "0,100"}/
       %p#right-price.pricer $100

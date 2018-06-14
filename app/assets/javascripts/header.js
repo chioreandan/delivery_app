@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function (event) {
   let navbar=$(".navbar-default");
   $(window).scroll(function () {
