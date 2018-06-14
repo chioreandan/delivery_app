@@ -17,6 +17,8 @@ gem 'activestorage-cloudinary-service'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'cloudinary'
 gem 'image_processing', '~> 1.2'
+gem 'popper_js', '~> 1.12.9'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'dotenv-rails'
