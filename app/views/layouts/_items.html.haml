@@ -1,4 +1,4 @@
-#items-wrap.row.container
+.row.container.wrapper
   - @products.each do |product|
     .body.col-lg-3.col-md-4.col-sm-6.image-hover
       .menu-image
@@ -9,4 +9,3 @@
         = product.category
       .price
         = "#{product.price}&nbsp;&#36;".html_safe
-= will_paginate @products

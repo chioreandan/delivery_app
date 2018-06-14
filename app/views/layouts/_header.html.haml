@@ -1,11 +1,11 @@
-.navbar.navbar-fixed-top.navbar-costum.navbar-default.navbar-expand-lg
-  %div.container.nav-wrap
-    %a#text-wrap
+.navbar.fixed-top.navbar-costum.navbar-default.navbar-expand-lg.navbar-custom
+  %div.container
+    %a.navbar-brand{:href => "#", :rel => "home"}
+      =image_tag ("logo.png")
+    %a.navbar-brand{:href => "#"}
       EUREKA
       = succeed "CAFFE" do
-        %br/
-    .navbar-brand
-      =image_tag ("logo.png")
+        %br/ 
     %ul.nav.navbar-nav.navbar-right.bullet.ml-auto
       %li.nav-item= link_to "HOME", '#'
       %li.nav-item= link_to "ABOUT", '#'
