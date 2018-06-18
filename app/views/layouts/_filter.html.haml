@@ -1,0 +1,33 @@
+%nav.navbar.navbar-expend-lg.navbar-static.bar-wrapper.navbar-expand-lg{:class => ".custom-carets"}
+  .container.nav-div
+    %ul.navbar-nav
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          CATEGORY
+        .dropdown-menu.category-dropdown{"aria-labelledby" => "navbarDropdown"}
+          = link_to 'Burgers','#', class: "dropdown-item"
+          = link_to 'Pizza','#', class: "dropdown-item"
+          = link_to 'Meals','#', class: "dropdown-item"
+          = link_to 'Soups','#', class: "dropdown-item"
+          = link_to 'Pasta','#', class: "dropdown-item"
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          SORTING
+        %span.caret
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          = link_to 'Delete filters','#', class: "dropdown-item del-filters"
+          = link_to 'Another Action','#', class: "dropdown-item"
+          = link_to 'Admin', admin_path(@admin), class: "dropdown-item"
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          VEGETARIAN
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          = link_to 'Action','#', class: "dropdown-item"
+          = link_to 'Another action','#', class: "dropdown-item"
+          = link_to 'Something else here','#', class: "dropdown-item"
+    .slider-nav.d-flex
+      %p.nav-price PRICE
+      %p#left-price.pricer $0
+      %section.demo.slider-Value
+        %input#range2{multiple: "multiple", type: "range", value: "0,100"}/
+      %p#right-price.pricer $100

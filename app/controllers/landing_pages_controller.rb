@@ -1,6 +1,7 @@
-class LandingPagesController < ActionController::Base
-  def home
+class LandingPagesController < ApplicationController
 
+  def home
+    @products = Product.all
   end
 
 end

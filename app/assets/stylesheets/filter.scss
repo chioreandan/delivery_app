@@ -1,0 +1,102 @@
+.slider-nav {
+  align-items: center;
+}
+
+.nav-price {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  margin-right: 12px;
+  color: black;
+}
+
+.pricer {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  margin-top: 4px;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-bottom: 5px;
+}
+
+.slider-wrapper {
+  .slider {
+    -webkit-appearance: none;
+    border: 0 0 0 0;
+    width: 200px;
+    margin-right: 0;
+    margin-left: 0;
+    height: 25px;
+    background: $body-bg;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+}
+
+#myRange {
+  margin-right: -80px;
+  overflow: hidden;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#footer {
+  background: $primary-color;
+}
+
+.demo {
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  transform: scale(1);
+  margin-right: 12px;
+}
+
+@supports (--css: variables) {
+  input[type="range"].multirange {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  input[type="range"].multirange.original {
+    position: absolute;
+  }
+  input[type="range"].multirange.original::-webkit-slider-thumb {
+    position: relative;
+    z-index: 2;
+  }
+  input[type="range"].multirange.original::-moz-range-thumb {
+    transform: scale(1);
+    z-index: 1;
+  }
+  input[type="range"].multirange::-moz-range-track {
+    border-color: transparent;
+  }
+  input[type="range"].multirange.ghost {
+    position: relative;
+    background: var(--track-background);
+    --track-background: linear-gradient(to right, transparent var(--low), var(--range-color) 0, var(--range-color) var(--high), transparent 0) no-repeat 0 45% / 100% 40%;
+    --range-color: orange;
+  }
+  input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
+    background: var(--track-background);
+  }
+  input[type="range"].multirange.ghost::-moz-range-track {
+    background: var(--track-background);
+  }
+}
