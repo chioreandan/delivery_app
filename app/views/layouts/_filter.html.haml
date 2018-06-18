@@ -5,29 +5,27 @@
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           CATEGORY
         .dropdown-menu.category-dropdown{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{href: "#"} Burgers
-          %a.dropdown-item{href: "#"} Pizza
-          %a.dropdown-item{href: "#"} Meals
-          %a.dropdown-item{href: "#"} Soups
-          %a.dropdown-item{href: "#"} Pasta
+          = link_to 'Burgers','#', class: "dropdown-item"
+          = link_to 'Pizza','#', class: "dropdown-item"
+          = link_to 'Meals','#', class: "dropdown-item"
+          = link_to 'Soups','#', class: "dropdown-item"
+          = link_to 'Pasta','#', class: "dropdown-item"
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           SORTING
         %span.caret
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a#del-filters.dropdown-item{href: "#"} Delete filters
-          %a.dropdown-item{href: "#"} Another action
-          .dropdown-divider
-          %a.dropdown-item{href: "/admin"} ADMIN
+          = link_to 'Delete filters','#', class: "dropdown-item del-filters"
+          = link_to 'Another Action','#', class: "dropdown-item"
+          = link_to 'Admin', admin_path(@admin), class: "dropdown-item"
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
           VEGETARIAN
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{href: "#"} Action
-          %a.dropdown-item{href: "#"} Another action
-          .dropdown-divider
-          %a.dropdown-item{href: "#"} Something else here
-    .slider-nav
+          = link_to 'Action','#', class: "dropdown-item"
+          = link_to 'Another action','#', class: "dropdown-item"
+          = link_to 'Something else here','#', class: "dropdown-item"
+    .slider-nav.d-flex
       %p.nav-price PRICE
       %p#left-price.pricer $0
       %section.demo.slider-Value

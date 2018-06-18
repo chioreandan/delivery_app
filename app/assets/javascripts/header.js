@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-  let navbar=$(".navbar-default");
+  let navbar = $(".navbar-default");
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
-    if(scroll>=100){
+    if (scroll >= 100) {
       console.log(navbar);
       navbar.addClass("scrolled");
-    }else {
+    } else {
       navbar.removeClass("scrolled");
     }
 
