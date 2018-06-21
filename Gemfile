@@ -21,7 +21,6 @@ gem 'popper_js', '~> 1.12.9'
 gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
-  gem 'dotenv-rails'
    gem 'sqlite3', '1.3.13'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -48,4 +47,6 @@ group :production do
   gem 'pg',  '0.20.0'
   gem 'fog', '1.42'
 end
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
