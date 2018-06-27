@@ -22,7 +22,6 @@ class ProductsController < ApplicationController
       if @product.save
         @product.image.attach(params[:product][:image]) if params[:product][:image].present?
         redirect_to @product, notice: 'Product was successfully created.'
-        byebug
       else
         render :new
       end

@@ -19,6 +19,9 @@ gem 'cloudinary'
 gem 'image_processing', '~> 1.2'
 gem 'popper_js', '~> 1.12.9'
 gem 'will_paginate', '~> 3.1.0'
+gem 'carrierwave'
+gem 'mini_magick'
+
 
 group :development, :test do
    gem 'sqlite3', '1.3.13'

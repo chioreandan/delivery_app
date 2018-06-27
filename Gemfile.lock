@@ -69,6 +69,10 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
@@ -465,6 +469,7 @@ DEPENDENCIES
   bootstrap (= 4.1.1)
   byebug
   capybara (>= 2.15, < 4.0)
+  carrierwave
   chromedriver-helper
   cloudinary
   coffee-rails (~> 4.2)
@@ -477,6 +482,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   minitest (= 5.11.3)
   minitest-reporters (= 1.1.14)
   pg (= 0.20.0)
