@@ -44,9 +44,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    respond_to do |format|
-    redirect_to products_url, notice: 'Product was successfully destroyed.'
-    end
+    redirect_to admin_path
   end
 
 
