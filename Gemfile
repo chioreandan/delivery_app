@@ -22,6 +22,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'
+gem 'will_paginate-bootstrap4'
 
 
 group :development, :test do

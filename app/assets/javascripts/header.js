@@ -10,5 +10,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
   });
+  $(".box1").click(function(){
+    window.location = $(this).find("a:first").attr("href");
+    return false;
+});
 
 });

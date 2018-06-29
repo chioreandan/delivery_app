@@ -1,4 +1,4 @@
-.row.container.wrapper
+.row.container.wrapper.box1
   - @products.each do |product|
     .body.col-lg-3.col-md-4.col-sm-6.image-hover.col-wrap
       .menu-image
@@ -9,3 +9,4 @@
         = product.category
       .price
         = "#{product.price} &#36;".html_safe
+      = link_to '', product
