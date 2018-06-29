@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize_admin, only: [:show]
 
   def index
     @products = Product.paginate(page: params[:page], per_page: 4)
@@ -43,9 +44,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    respond_to do |format|
-    redirect_to products_url, notice: 'Product was successfully destroyed.'
-    end
+    redirect_to admin_path
   end
 
 

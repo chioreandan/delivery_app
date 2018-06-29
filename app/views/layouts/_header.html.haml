@@ -7,11 +7,16 @@
       %br/
       CAFFE
     %ul.nav.navbar-nav.navbar-right.bullet.ml-auto
-      %li.nav-item= link_to "HOME", '#'
+      %li.nav-item= link_to "HOME", root_path
       %li.nav-item= link_to "ABOUT", '#'
       %li.nav-item= link_to "SERVICE", '#'
-      %li.nav-item= link_to "BLOG", '#'
+      - if logged_in?
+        %li.nav-item= link_to "LOG OUT", logout_path, method: :delete
+      -else
+        %li.nav-item= link_to "LOG IN", login_path
       %li.nav-item=link_to "CONTACTS", '#'
+      -if current_user&.admin?
+        %li.nav-item=link_to "ADMIN", admin_path
 .jumbotron#jumbotron-costum
   .container
     %h1

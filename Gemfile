@@ -21,6 +21,7 @@ gem 'popper_js', '~> 1.12.9'
 gem 'will_paginate', '~> 3.1.0'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'bcrypt'
 
 
 group :development, :test do
