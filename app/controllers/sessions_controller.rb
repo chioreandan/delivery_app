@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  skip_before_action :authorize_admin, only: [:new,:destroy,:create]
+  skip_before_action :authorize_admin
+  include SessionsHelper
   def new
   end
 

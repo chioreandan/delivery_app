@@ -1,0 +1,22 @@
+%p#notice= notice
+.container
+  .product-wrap
+    %p
+      %b Id:
+      = @order.id
+    %p
+      %b Processed:
+      = @order.processed?
+    %p
+      %b Price:
+      = @order.total_price
+    %p
+      %b Products:
+      - @order.products.each do |product|
+        %p
+          = product.name
+    %button.btn.btn-primary
+      Handle
+    %br
+    \|
+    = link_to 'Back', orders_path

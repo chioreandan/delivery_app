@@ -4,9 +4,9 @@
       .menu-image
         = cl_image_tag(product.image.key)
       .item
-        = product.name
+        = link_to product.name, product
       .category
         = product.category
       .price
         = "#{product.price} &#36;".html_safe
-      = link_to '', product
+      -# = link_to '', product

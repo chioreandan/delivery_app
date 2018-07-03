@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize_admin, only: [:new]
+  skip_before_action :authorize_admin, only: [:new,:view_orders,:create]
   def show
     @user = User.find(params[:id])
   end
@@ -11,10 +11,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user
+      log_in @user
+      redirect_to root_path
     else
       render 'new'
     end
+  end
+  def view_orders
+    @orders = current_user.orders
   end
 
   private

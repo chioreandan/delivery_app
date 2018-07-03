@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
+  include OrdersHelper
 
   before_action :authorize_admin
   def authorize_admin

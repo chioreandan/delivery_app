@@ -1,0 +1,23 @@
+%h1 Listing orders
+.container
+  .index-wrap
+    %table#table1.table-hover.table-active
+      %thead
+        %tr
+          %th Order id
+          %th User email
+          %th Number of products
+          %th Go to order
+          %th
+          %th
+
+      %tbody
+        - @orders.each do |order|
+          %tr
+            %td= order.id
+            %td= order.user.email
+            %td= order.products.count
+            %td= link_to "View", order
+
+    %br
+
