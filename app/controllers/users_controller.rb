@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   skip_before_action :authorize_admin, only: [:new,:view_orders,:create]
+  skip_before_action :require_login, only: [:new, :create]
+
+
   def show
     @user = User.find(params[:id])
   end

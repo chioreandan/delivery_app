@@ -1,0 +1,45 @@
+%link#bootstrap-css{:href => "//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+.container
+  %table#cart.table.table-hover.table-condensed
+    %thead
+      %tr
+        %th{:style => "width:50%"} Product
+        %th{:style => "width:10%"} Price
+        %th{:style => "width:8%"} Quantity
+        %th.text-center{:style => "width:22%"} Subtotal
+        %th{:style => "width:10%"}
+    %tbody
+      - @order.products.each do |product|
+        %tr
+          %td{"data-th" => "Product"}
+            .row
+              .col-sm-2.hidden-xs
+                %img.img-responsive
+                  = cl_image_tag(product.image.key, width: 70, height: 70, crop: "scale")
+              .col-sm-10
+                %h4.nomargin
+                  = link_to product.name, product
+                %p Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.
+          %td{"data-th" => "Price"}
+            = product.price
+            &#36
+          %td{"data-th" => "Quantity"}
+            %input.form-control.text-center{:type => "number", :value => "1"}/
+          %td.text-center{"data-th" => "Subtotal"}
+            = product.price
+            &#36
+          %td.actions{"data-th" => ""}
+            = button_to "Refresh", root_path ,class: "btn btn-info btn-sm"
+            = button_to "Delete", remove_product_orders_path(id: product.id) ,class: "btn btn-danger btn-sm", data: {confirm: "Are you sure?"}, method: :delete
+    %tfoot
+      %tr
+        %td
+          = link_to "Continue shopping",root_path, {class:"btn btn-warning"}
+        %td.hidden-xs{:colspan => "2"}
+        %td.hidden-xs.text-center
+          %strong
+            Total
+            = @order.total_price
+            &#36
+        %td
+          = link_to "Checkout",order_send_orders_path,class:"btn btn-success btn-block", data: {confirm: "Are you sure?"}, method: :post

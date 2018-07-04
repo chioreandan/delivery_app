@@ -9,7 +9,8 @@
     %ul.nav.navbar-nav.navbar-right.bullet.ml-auto
       %li.nav-item= link_to "HOME", root_path
       %li.nav-item= link_to "ABOUT", '#'
-      %li.nav-item= link_to "SERVICE", '#'
+      - if current_user&.open_orders?
+        %li.nav-item= link_to "CART", cart_path
       - if logged_in?
         %li.nav-item= link_to "LOG OUT", logout_path, method: :delete
       -else

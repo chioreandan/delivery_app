@@ -9,11 +9,15 @@ class Order < ApplicationRecord
   scope :is_sent_not_processed, ->{where(sent: true, processed: nil)}
 
   def total_price
-    price=0
-    self.products.each do |product|
-      price +=product.price
-    end
-    return price.round(2)
+    products.sum(:price).round(2)
+  end
+
+  def send_order
+    toggle!(:sent)
+  end
+
+  def handle_order
+    toggle!(:processed)
   end
 
 end

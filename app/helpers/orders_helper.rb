@@ -2,6 +2,7 @@ module OrdersHelper
   def is_processed?(order)
     order.processed.nil?
   end
+
   def log_order(order)
     session[:order_id] = order.id
   end

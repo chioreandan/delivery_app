@@ -8,12 +8,15 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  get 'cart', to: 'users#view_orders'
+  get 'cart', to: 'orders#cart'
   root :to => "landing_pages#home"
   resources :products
   resources :users
   resources :orders do
-    post 'add_product'
+    post 'add_product', on: :collection
+    delete 'remove_product', on: :collection
+    post 'order_handle', on: :member
+    post 'order_send', on: :collection
   end
 
 end

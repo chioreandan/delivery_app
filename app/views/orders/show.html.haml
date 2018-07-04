@@ -5,8 +5,15 @@
       %b Id:
       = @order.id
     %p
+      %b User Id:
+      = @order.user.id
+      = @order.user.email
+    %p
       %b Processed:
       = @order.processed?
+    %p
+      %b Sent:
+      = @order.sent?
     %p
       %b Price:
       = @order.total_price
@@ -15,8 +22,7 @@
       - @order.products.each do |product|
         %p
           = product.name
-    %button.btn.btn-primary
-      Handle
+    =button_to "Handle",order_handle_order_path,class:"btn btn-primary", method: :post
     %br
     \|
     = link_to 'Back', orders_path
