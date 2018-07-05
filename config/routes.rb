@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'orders/new'
   get 'orders/view'
-  #get 'users/new'
   get '/admin', to: "products#index", as: 'admin'
   get '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
@@ -17,6 +16,10 @@ Rails.application.routes.draw do
     delete 'remove_product', on: :collection
     post 'order_handle', on: :member
     post 'order_send', on: :collection
+  end
+
+  resources :order_details do
+    patch 'update', on: :collection
   end
 
 end

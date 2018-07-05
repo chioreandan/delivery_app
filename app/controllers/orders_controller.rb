@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
     end
 
     order.products.push(@product)
-    redirect_to root_path
+    redirect_to request.referrer
   end
 
   def cart
@@ -39,10 +39,10 @@ class OrdersController < ApplicationController
   end
 
   def remove_product
-    @product = Product.find(params[:id])
     order = current_user.orders.is_not_sent.last
-    order.products.destroy(@product)
-    redirect_to request.referrer
+    @product = order.products.find(params[:id])
+    order.products.destroy(@products)
+    redirect_to cart_path
   end
 
   def order_send

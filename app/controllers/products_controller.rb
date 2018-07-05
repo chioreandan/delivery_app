@@ -27,7 +27,6 @@ class ProductsController < ApplicationController
         render :new
       end
     end
-
   end
 
   def update

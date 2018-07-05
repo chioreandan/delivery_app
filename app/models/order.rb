@@ -7,6 +7,7 @@ class Order < ApplicationRecord
   scope :is_not_sent, ->{where(sent: nil)}
   scope :is_processed, ->{where(processed: true)}
   scope :is_sent_not_processed, ->{where(sent: true, processed: nil)}
+  scope :order_details_id, ->(order_id) { where(order_detail.id:product.order_details_id)}
 
   def total_price
     products.sum(:price).round(2)
