@@ -6,11 +6,12 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order=current_user.orders.new
+    @order = current_user.orders.new
+    @order.save
   end
 
   def index
-    @orders = Order.is_sent_not_processed
+    @orders = Order.not_processed
   end
 
   def show
@@ -21,7 +22,7 @@ class OrdersController < ApplicationController
     @product = Product.find(params[:id])
 
     if current_user.open_orders?
-      order = current_user.orders.is_not_sent.last
+      order = current_user.orders.not_sent.last
     else
       order = Order.create(user: current_user)
     end
@@ -32,21 +33,21 @@ class OrdersController < ApplicationController
 
   def cart
     if current_user.open_orders?
-      @order = current_user.orders.is_not_sent.last
+      @order = current_user.orders.not_sent.last
     else
       redirect_to root_path
     end
   end
 
   def remove_product
-    order = current_user.orders.is_not_sent.last
+    order = current_user.orders.not_sent.last
     @product = order.products.find(params[:id])
-    order.products.destroy(@products)
+    order.products.destroy(@product)
     redirect_to cart_path
   end
 
   def order_send
-    order = current_user.orders.is_not_sent.last
+    order = current_user.orders.not_sent.last
     order.send_order
   end
 

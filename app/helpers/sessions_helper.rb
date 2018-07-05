@@ -1,7 +1,6 @@
 module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
-    # current_user.orders.create
   end
 
   def current_user

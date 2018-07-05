@@ -21,21 +21,12 @@ input {
   }
 }
 
-
-.log-wrap{
-  margin-right: 0;
-  margin-left: auto;
-  padding-right:0;
-  width: 700px;
-  margin-top: 50px;
-}
-
-
 .product-wrap{
-  margin-right: auto;
-  margin-left: auto;
-  width: 200px;
+  margin-top: 10px;
   text-align: center;
+}
+.button-wrap{
+  width: auto;
 }
 
 .index-wrap{
@@ -46,7 +37,7 @@ input {
   padding-left: 10px;
 
 }
-#table1{
+#table-wrapper{
   border-collapse: separate;
   text-align: center;
   border-spacing: 10px;

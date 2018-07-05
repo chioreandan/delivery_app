@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :password, confirmation: true, length: { minimum: 5 }, allow_nil: true
 
   def open_orders?
-    orders.is_not_sent.count.positive?
+    orders.not_sent.count.positive?
   end
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize_admin, only: [:new,:view_orders,:create]
+  skip_before_action :authorize_admin, only: [:new, :view_orders, :create]
   skip_before_action :require_login, only: [:new, :create]
 
   def show
@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
   def view_orders
     @orders = current_user.orders
   end

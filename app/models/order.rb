@@ -4,9 +4,9 @@ class Order < ApplicationRecord
   has_many :products, through: :order_details
 
   scope :is_sent, ->{where(sent: true)}
-  scope :is_not_sent, ->{where(sent: nil)}
+  scope :not_sent, ->{where(sent: nil)}
   scope :is_processed, ->{where(processed: true)}
-  scope :is_sent_not_processed, ->{where(sent: true, processed: nil)}
+  scope :not_processed, ->{where(sent: true, processed: nil)}
   scope :order_details_id, ->(order_id) { where(order_detail.id:product.order_details_id)}
 
   def total_price
